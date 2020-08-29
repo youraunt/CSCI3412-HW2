@@ -1,5 +1,4 @@
 import secrets as s
-import random as r
 
 
 def random_a():
@@ -27,7 +26,7 @@ def b_from_a():
 if __name__ == "__main__":
     a_from_b_storage = []
     b_from_a_storage = []
-    for x in range(0, 10000000):
+    for x in range(0, 10000):
         temp_a = b_from_a()
         temp_b = a_from_b()
         a_from_b_storage.append(temp_b)
