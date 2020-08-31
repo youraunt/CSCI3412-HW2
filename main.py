@@ -23,18 +23,23 @@ def b_from_a():
     return temp_storage % 9
 
 
-if __name__ == "__main__":
+def main():
     a_from_b_storage = []
     b_from_a_storage = []
-    for x in range(0, 10000):
+    for x in range(0, 10000000):
         temp_a = b_from_a()
         temp_b = a_from_b()
         a_from_b_storage.append(temp_b)
         b_from_a_storage.append(temp_a)
-print("\na from b")
-for x in range(0, 5):
-    print(x, a_from_b_storage.count(x))
+    print("\na from b")
 
-print("\nb from a")
-for x in range(0, 8):
-    print(x, b_from_a_storage.count(x))
+    for x in range(0, 6):
+        print(x, a_from_b_storage.count(x), "%", a_from_b_storage.count(x)/100000)
+
+    print("\nb from a")
+    for x in range(0, 9):
+        print(x, b_from_a_storage.count(x), "%", b_from_a_storage.count(x)/100000)
+
+
+if __name__ == "__main__":
+    main()
